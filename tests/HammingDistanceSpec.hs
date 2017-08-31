@@ -22,8 +22,8 @@ spec = do
       rpad 3 [1,2,3] `shouldBe` [1,2,3]
       rpad 5 [1,2,3] `shouldBe` [1,2,3,0,0]
 
-  describe "hamming" $ do
+  describe "hammingDistance" $ do
     it "can find the Hamming distance of 2 integers" $ do
-      hamming 1 2 `shouldBe` 2
-      hamming 1 4 `shouldBe` 2
-      hamming 6 7 `shouldBe` 1
+      hammingDistance 1 2 `shouldBe` 2
+      hammingDistance 1 4 `shouldBe` 2
+      hammingDistance 6 7 `shouldBe` 1
