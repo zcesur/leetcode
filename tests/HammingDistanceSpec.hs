@@ -5,16 +5,6 @@ import HammingDistance
 
 spec :: Spec
 spec = do
-  describe "toBinary" $ do
-    it "can convert a number to binary" $ do
-      toBinary 1 `shouldBe` [1]
-      toBinary 2 `shouldBe` [0,1]
-      toBinary 3 `shouldBe` [1,1]
-      toBinary 4 `shouldBe` [0,0,1]
-      toBinary 5 `shouldBe` [1,0,1]
-      toBinary 6 `shouldBe` [0,1,1]
-      toBinary 7 `shouldBe` [1,1,1]
-  
   describe "rpad" $ do
     it "can right-pad a list of integers with zeros" $ do
       rpad 2 [] `shouldBe` [0,0]

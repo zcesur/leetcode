@@ -16,9 +16,13 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 library
-  exposed-modules:     HammingDistance
+  exposed-modules:     Util
+                      ,HammingDistance
                       ,JudgeRouteCircle
                       ,ArrayPartitionI
+                      ,NumberComplement
+                      ,KeyboardRow
+                      ,ReverseWordsInAStringIII
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.8 && <4.9
