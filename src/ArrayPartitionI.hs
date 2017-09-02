@@ -7,11 +7,11 @@ import Data.List (transpose, sort, permutations)
 -- bi) for all i from 1 to n as large as possible. 
 arrayPairSum :: [Int] -> Int
 arrayPairSum [] = 0
-arrayPairSum xs = sum . head . transpose . (splitAfterEvery 2) . sort $ xs
+arrayPairSum xs = sum . head . transpose . (groupsOf 2) . sort $ xs
 
-splitAfterEvery :: Int -> [a] -> [[a]]
-splitAfterEvery _ [] = []
-splitAfterEvery n xs = take n xs : splitAfterEvery n (drop n xs)
+groupsOf :: Int -> [a] -> [[a]]
+groupsOf _ [] = []
+groupsOf n xs = take n xs : groupsOf n (drop n xs)
 
 -- Might use this later when writing a property test after learning more about
 -- QuickCheck. First need to learn: 1) how to randomly generate small lists
@@ -20,4 +20,4 @@ arrayPairSumBruteForce :: [Int] -> Int
 arrayPairSumBruteForce = maximum . map findSum . permutations
   where
     findSum :: [Int] -> Int
-    findSum = sum . map minimum . splitAfterEvery 2
+    findSum = sum . map minimum . groupsOf 2
