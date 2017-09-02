@@ -23,6 +23,8 @@ library
                       ,NumberComplement
                       ,KeyboardRow
                       ,ReverseWordsInAStringIII
+                      ,ReverseString
+                      ,DistributeCandies
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.8 && <4.9
