@@ -25,6 +25,7 @@ library
                       ,ReverseWordsInAStringIII
                       ,ReverseString
                       ,DistributeCandies
+                      ,ReshapeTheMatrix
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.8 && <4.9

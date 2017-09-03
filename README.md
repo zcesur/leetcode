@@ -11,3 +11,4 @@ Leetcode
 | 557 | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii) | [ReverseWordsInAStringIII.hs](./src/ReverseWordsInAStringIII.hs) |
 | 344 | [Reverse String](https://leetcode.com/problems/reverse-string) | [ReverseString.hs](./src/ReverseString.hs) |
 | 575 | [Distribute Candies](https://leetcode.com/problems/distribute-candies) | [DistributeCandies.hs](./src/DistributeCandies.hs) |
+| 566 | [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix) | [ReshapeTheMatrix.hs](./src/ReshapeTheMatrix.hs) |

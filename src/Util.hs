@@ -11,3 +11,8 @@ toBinary x = (x `mod` 2) : toBinary (x `div` 2)
 -- | Convert binary to decimal.
 fromBinary :: [Int] -> Int
 fromBinary = let powersOf2 = map (2^) [0..] in sum . zipWith (*) powersOf2
+
+-- | Split a list into sublists of size n (except for the last one)
+groupsOf :: Int -> [a] -> [[a]]
+groupsOf _ [] = []
+groupsOf n xs = take n xs : groupsOf n (drop n xs)
