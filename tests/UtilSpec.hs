@@ -24,3 +24,9 @@ spec = do
       fromBinary [1,0,1] `shouldBe` 5
       fromBinary [0,1,1] `shouldBe` 6
       fromBinary [1,1,1] `shouldBe` 7
+
+  describe "groupsOf" $ do
+    it "can split a list into sublists of size n (except for the last one)" $ do
+      groupsOf 3 [1..6] `shouldBe` [[1..3], [4..6]]
+      groupsOf 2 [1..5] `shouldBe` [[1,2], [3,4], [5]]
+
