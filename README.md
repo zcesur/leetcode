@@ -12,3 +12,5 @@ Leetcode
 | 344 | [Reverse String](https://leetcode.com/problems/reverse-string) | [ReverseString.hs](./src/ReverseString.hs) |
 | 575 | [Distribute Candies](https://leetcode.com/problems/distribute-candies) | [DistributeCandies.hs](./src/DistributeCandies.hs) |
 | 566 | [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix) | [ReshapeTheMatrix.hs](./src/ReshapeTheMatrix.hs) |
+| 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree) | [InvertBinaryTree.hs](./src/InvertBinaryTree.hs) |
+| 404 | [Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves) | [SumOfLeftLeaves.hs](./src/SumOfLeftLeaves.hs) |
