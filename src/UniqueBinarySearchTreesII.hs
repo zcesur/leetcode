@@ -14,14 +14,10 @@ generateTreesHelper :: Ord a => Tree a -> [Tree a]
 generateTreesHelper Nil = [Nil]
 generateTreesHelper t@(Node l x r) = case (l, r) of
     (Nil, Nil) -> [t]
-    (Nil, _)   -> concatMap go $ map ($ t) $ selfCompose rotL (height t)
-    (_, Nil)   -> concatMap go $ map ($ t) $ selfCompose rotR (height t)
+    (Nil, _)   -> concatMap go $ take (height t + 1) $ iterate rotL t
+    (_, Nil)   -> concatMap go $ take (height t + 1) $ iterate rotR t
     (_, _)     -> undefined
   where
-    -- Self compose a function up to n times and store the results in a list
-    selfCompose :: (a -> a) -> Int -> [a -> a]
-    selfCompose f n = scanl (.) id (replicate n f)
-    
     -- Generate all structurally unique BST's where the root node of the given
     -- BST stays fixed.
     go :: Ord a => Tree a -> [Tree a]
