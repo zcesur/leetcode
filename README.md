@@ -1,6 +1,8 @@
 Leetcode
 ========
 
+## Easy
+
 | # | Title | Solution |
 |---| ----- | -------- |
 | 461 | [Hamming Distance](https://leetcode.com/problems/hamming-distance) | [HammingDistance.hs](./src/HammingDistance.hs) |
@@ -14,3 +16,9 @@ Leetcode
 | 566 | [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix) | [ReshapeTheMatrix.hs](./src/ReshapeTheMatrix.hs) |
 | 226 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree) | [InvertBinaryTree.hs](./src/InvertBinaryTree.hs) |
 | 404 | [Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves) | [SumOfLeftLeaves.hs](./src/SumOfLeftLeaves.hs) |
+
+## Medium
+
+| # | Title | Solution |
+|---| ----- | -------- |
+| 95 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii) | [UniqueBinarySearchTreesII.hs](./src/UniqueBinarySearchTreesII.hs) |

@@ -18,6 +18,7 @@ cabal-version:       >=1.10
 library
   exposed-modules:     Util
                       ,ADT.Tree
+                      ,ADT.BST
                       ,HammingDistance
                       ,JudgeRouteCircle
                       ,ArrayPartitionI
@@ -29,6 +30,7 @@ library
                       ,ReshapeTheMatrix
                       ,InvertBinaryTree
                       ,SumOfLeftLeaves
+                      ,UniqueBinarySearchTreesII
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.8 && <4.9, containers
