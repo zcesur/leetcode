@@ -25,3 +25,9 @@ Leetcode
 |---| ----- | -------- |
 | 95 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii) | [UniqueBinarySearchTreesII.hs](./src/UniqueBinarySearchTreesII.hs) |
 | 338 | [Counting Bits](https://leetcode.com/problems/counting-bits) | [CountingBits.hs](./src/CountingBits.hs) |
+
+## Hard
+
+| # | Title | Solution |
+|---| ----- | -------- |
+| 312 | [Burst Balloons](https://leetcode.com/problems/burst-balloons) | [BurstBalloons.hs](./src/BurstBalloons.hs) |
