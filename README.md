@@ -31,3 +31,4 @@ Leetcode
 | # | Title | Solution |
 |---| ----- | -------- |
 | 312 | [Burst Balloons](https://leetcode.com/problems/burst-balloons) | [BurstBalloons.hs](./src/BurstBalloons.hs) |
+| 632 | [Smallest Range](https://leetcode.com/problems/smallest-range) | [SmallestRange.hs](./src/SmallestRange.hs) |
