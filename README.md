@@ -25,6 +25,8 @@ Leetcode
 |---| ----- | -------- |
 | 95 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii) | [UniqueBinarySearchTreesII.hs](./src/UniqueBinarySearchTreesII.hs) |
 | 338 | [Counting Bits](https://leetcode.com/problems/counting-bits) | [CountingBits.hs](./src/CountingBits.hs) |
+| 654 | [Maximum Binary Tree](https://leetcode.com/problems/maximum-binary-tree) | [MaximumBinaryTree.hs](./src/MaximumBinaryTree.hs) |
+| 419 | [Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board) | [BattleshipsInABoard.hs](./src/BattleshipsInABoard.hs) |
 
 ## Hard
 
