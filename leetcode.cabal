@@ -35,6 +35,8 @@ library
                      , BurstBalloons
                      , SmallestRange
                      , NQueens
+                     , MaximumBinaryTree
+                     , BattleshipsInABoard
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.8 && <4.9
