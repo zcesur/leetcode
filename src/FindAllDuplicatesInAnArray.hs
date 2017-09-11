@@ -1,35 +1,30 @@
+{-# LANGUAGE ScopedTypeVariables #-}
+
 module FindAllDuplicatesInAnArray where
 
-import Control.Monad.State
+import Control.Monad (foldM, liftM)
+import Control.Monad.ST
+import Data.Array.ST
 
-import Data.List (sort)
-
-import Data.Hashable (Hashable(..))
-import qualified Data.HashMap.Lazy as HashMap
-import Data.HashMap.Lazy (HashMap(..))
-
-findDuplicates :: Ord a => [a] -> [a]
-findDuplicates xs = go $ sort xs
+-- | Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array), some
+-- elements appear twice and others appear once.
+-- 
+-- Find all the elements that appear twice in this array.
+-- 
+-- Could you do it without extra space and in O(n) runtime?
+findDuplicates :: [Int] -> [Int]
+findDuplicates xs = runST $ findDuplicates' xs
   where
-    go (x:y:ys) | x == y    = x : go ys
-                | otherwise = go (y:ys)
-    go _ = []
+    findDuplicates' :: forall s. [Int] -> ST s [Int]
+    findDuplicates' xs = do
+        arr <- newListArray (1, length xs) xs :: ST s (STArray s Int Int)
 
-findDuplicates' :: (Eq a, Hashable a) => [a] -> [a]
-findDuplicates' xs = evalState (go xs) HashMap.empty
-  where
-    go :: (Eq k, Hashable k) => [k] -> State (HashMap k Char) [k]
-    go [] = return []
-    go (x:xs) = do
-        map <- get
-        if x `HashMap.member` map
-            then do pop x
-                    liftM2 (:) (return x) (go xs)
-            else do push x
-                    go xs
+        let go :: [Int] -> Int -> ST s [Int]
+            go acc i = do x <- liftM abs $ readArray arr i
+                          y <- readArray arr x
+                          if y < 0
+                              then return (x:acc)
+                              else do writeArray arr x (-y)
+                                      return acc 
 
-    pop :: (Eq k, Hashable k) => k -> State (HashMap k Char) k 
-    pop a = state $ \xs -> (a, HashMap.delete a xs)
-
-    push :: (Eq k, Hashable k) => k -> State (HashMap k Char) ()
-    push a = state $ \xs -> ((), HashMap.insert a ' ' xs)
+        foldM go [] [1..length xs]
