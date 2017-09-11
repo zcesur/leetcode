@@ -29,7 +29,8 @@ Leetcode
 | 419 | [Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board) | [BattleshipsInABoard.hs](./src/BattleshipsInABoard.hs) |
 | 513 | [Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value) | [FindBottomLeftTreeValue.hs](./src/FindBottomLeftTreeValue.hs) |
 | 442 | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array) | [FindAllDuplicatesInAnArray.hs](./src/FindAllDuplicatesInAnArray.hs) |
-| 406 | [Queue Reconstruction By Height](https://leetcode.com/problems/queue-reconstruction-by-height) | [QueueReconstructionByHeight.hs](./src/QueueReconstructionByHeight.hs) |
+| 406 | [Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height) | [QueueReconstructionByHeight.hs](./src/QueueReconstructionByHeight.hs) |
+| 540 | [Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array) | [SingleElementInASortedArray.hs](./src/SingleElementInASortedArray.hs) |
 
 ## Hard
 
