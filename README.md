@@ -27,6 +27,8 @@ Leetcode
 | 338 | [Counting Bits](https://leetcode.com/problems/counting-bits) | [CountingBits.hs](./src/CountingBits.hs) |
 | 654 | [Maximum Binary Tree](https://leetcode.com/problems/maximum-binary-tree) | [MaximumBinaryTree.hs](./src/MaximumBinaryTree.hs) |
 | 419 | [Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board) | [BattleshipsInABoard.hs](./src/BattleshipsInABoard.hs) |
+| 513 | [Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value) | [FindBottomLeftTreeValue.hs](./src/FindBottomLeftTreeValue.hs) |
+| 442 | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array) | [FindAllDuplicatesInAnArray.hs](./src/FindAllDuplicatesInAnArray.hs) |
 
 ## Hard
 
