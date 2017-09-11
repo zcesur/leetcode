@@ -1,17 +1,4 @@
-module ADT.Tree
-( Tree(..)
-, leaf
-, val
-, left
-, right
-, height
-, balanced
-, preorder
-, inorder
-, postorder
-, levelorder
-, printT
-) where
+module ADT.Tree where
 
 data Tree a = Nil | Node (Tree a) a (Tree a) deriving (Show, Eq)
 

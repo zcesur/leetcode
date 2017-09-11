@@ -37,6 +37,8 @@ library
                      , NQueens
                      , MaximumBinaryTree
                      , BattleshipsInABoard
+                     , FindBottomLeftTreeValue
+                     , FindAllDuplicatesInAnArray
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.8 && <4.9
@@ -44,6 +46,7 @@ library
                      , unordered-containers
                      , array
                      , mtl
+                     , hashable
   hs-source-dirs:      src
   default-language:    Haskell2010
 
