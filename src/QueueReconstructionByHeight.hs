@@ -1,6 +1,8 @@
 module QueueReconstructionByHeight where
 
+import qualified Data.Sequence as Seq
 import Data.List (sortBy)
+import Data.Foldable (toList)
 import Data.Monoid ((<>))
 
 -- | Suppose you have a random list of people standing in a queue. Each
@@ -9,7 +11,7 @@ import Data.Monoid ((<>))
 -- a height greater than or equal to h. Write an algorithm to reconstruct the
 -- queue.
 reconstruct :: [(Int, Int)] -> [(Int, Int)]
-reconstruct = foldr go [] . sortBy (ordering)
+reconstruct = toList . foldr go Seq.empty . sortBy (ordering)
   where
     ordering (a,b) (c,d) = a `compare` c <> d `compare` b
-    go (h,k) acc = let (ls, rs) = splitAt k acc in ls ++ [(h,k)] ++ rs
+    go (h,k) acc = Seq.insertAt k (h,k) acc
