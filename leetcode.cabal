@@ -41,6 +41,7 @@ library
                      , FindAllDuplicatesInAnArray
                      , QueueReconstructionByHeight
                      , SingleElementInASortedArray
+                     , OptimalDivision
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base
