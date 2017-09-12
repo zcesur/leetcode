@@ -44,7 +44,7 @@ library
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base
-                     , containers
+                     , containers >=0.5.8
                      , unordered-containers
                      , array
                      , mtl
