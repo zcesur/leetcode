@@ -32,6 +32,8 @@ Leetcode
 | 406 | [Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height) | [QueueReconstructionByHeight.hs](./src/QueueReconstructionByHeight.hs) |
 | 540 | [Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array) | [SingleElementInASortedArray.hs](./src/SingleElementInASortedArray.hs) |
 | 553 | [Optimal Division](https://leetcode.com/problems/optimal-division) | [OptimalDivision.hs](./src/OptimalDivision.hs) |
+| 515 | [Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row) | [FindLargestValueInEachTreeRow.hs](./src/FindLargestValueInEachTreeRow.hs) |
+| 647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings) | [PalindromicSubstrings.hs](./src/PalindromicSubstrings.hs) |
 
 ## Hard
 

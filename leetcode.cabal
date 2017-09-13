@@ -42,6 +42,8 @@ library
                      , QueueReconstructionByHeight
                      , SingleElementInASortedArray
                      , OptimalDivision
+                     , FindLargestValueInEachTreeRow
+                     , PalindromicSubstrings
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base
