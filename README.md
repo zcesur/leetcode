@@ -35,6 +35,7 @@ Leetcode
 | 515 | [Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row) | [FindLargestValueInEachTreeRow.hs](./src/FindLargestValueInEachTreeRow.hs) |
 | 647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings) | [PalindromicSubstrings.hs](./src/PalindromicSubstrings.hs) |
 | 399 | [Evaluate Division](https://leetcode.com/problems/evaluate-division) | [EvaluateDivision.hs](./src/EvaluateDivision.hs) |
+| 677 | [Map Sum Pairs](https://leetcode.com/problems/map-sum-pairs) | [MapSumPairs.hs](./src/MapSumPairs.hs) |
 
 ## Hard
 
