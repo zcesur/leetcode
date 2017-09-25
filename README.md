@@ -36,6 +36,7 @@ Leetcode
 | 647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings) | [PalindromicSubstrings.hs](./src/PalindromicSubstrings.hs) |
 | 399 | [Evaluate Division](https://leetcode.com/problems/evaluate-division) | [EvaluateDivision.hs](./src/EvaluateDivision.hs) |
 | 677 | [Map Sum Pairs](https://leetcode.com/problems/map-sum-pairs) | [MapSumPairs.hs](./src/MapSumPairs.hs) |
+| 413 | [Arithmetic Slices](https://leetcode.com/problems/arithmetic-slices) | [ArithmeticSlices.hs](./src/ArithmeticSlices.hs) |
 
 ## Hard
 

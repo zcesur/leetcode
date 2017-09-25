@@ -46,6 +46,7 @@ library
                      , PalindromicSubstrings
                      , EvaluateDivision
                      , MapSumPairs
+                     , ArithmeticSlices
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base
