@@ -23,9 +23,9 @@ smallestRange xs = evalState (go (0, maxBound :: Int)) xs'
             then return range
             else do
                 let (min:rest) = mins
-                (max:_, _) <- peekMax
+                maxS <- peekMax
                 push (rest, ' ')
-                go $ chooseRange range (min, max)
+                go $ chooseRange range (min, head (fst maxS))
 
 popMin :: State (Map k a) (k,a)
 popMin = state Map.deleteFindMin
