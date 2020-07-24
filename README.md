@@ -46,3 +46,4 @@ Leetcode
 | 312 | [Burst Balloons](https://leetcode.com/problems/burst-balloons) | [BurstBalloons.hs](./src/BurstBalloons.hs) |
 | 632 | [Smallest Range](https://leetcode.com/problems/smallest-range) | [SmallestRange.hs](./src/SmallestRange.hs) |
 | 51 | [N-Queens](https://leetcode.com/problems/n-queens) | [NQueens.hs](./src/NQueens.hs) |
+| 1106 | [Parsing A Boolean Expression](https://leetcode.com/problems/parsing-a-boolean-expression) | [ParsingABooleanExpression.hs](./src/ParsingABooleanExpression.hs) |

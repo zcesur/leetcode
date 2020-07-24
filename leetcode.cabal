@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1b1f97478ae11744bc939d99cf01c4ffae5c49d0e0ef57ba289424d8fdfbe80f
+-- hash: 5ae57050d29beefb1fc836d6517f83d9715234bdd24aed062f5e6bf4769069ae
 
 name:           leetcode
 version:        0.1.0.0
@@ -48,6 +48,7 @@ library
       NumberComplement
       OptimalDivision
       PalindromicSubstrings
+      ParsingABooleanExpression
       PartitionEqualSubsetSum
       QueueReconstructionByHeight
       ReshapeTheMatrix
@@ -70,6 +71,7 @@ library
     , fgl
     , hashable
     , mtl
+    , parsec
     , unordered-containers
   default-language: Haskell2010
 
@@ -97,6 +99,7 @@ test-suite leetcode-test
       NumberComplementSpec
       OptimalDivisionSpec
       PalindromicSubstringsSpec
+      ParsingABooleanExpressionSpec
       PartitionEqualSubsetSumSpec
       QueueReconstructionByHeightSpec
       ReshapeTheMatrixSpec
@@ -121,5 +124,6 @@ test-suite leetcode-test
     , hspec-discover
     , leetcode
     , mtl
+    , parsec
     , unordered-containers
   default-language: Haskell2010
