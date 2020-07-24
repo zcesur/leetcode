@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ca5533e55d994b70c315443e9afd33b230182a256e13212a840528df3d13f33f
+-- hash: 1b1f97478ae11744bc939d99cf01c4ffae5c49d0e0ef57ba289424d8fdfbe80f
 
 name:           leetcode
 version:        0.1.0.0
@@ -48,6 +48,7 @@ library
       NumberComplement
       OptimalDivision
       PalindromicSubstrings
+      PartitionEqualSubsetSum
       QueueReconstructionByHeight
       ReshapeTheMatrix
       ReverseString
@@ -96,6 +97,7 @@ test-suite leetcode-test
       NumberComplementSpec
       OptimalDivisionSpec
       PalindromicSubstringsSpec
+      PartitionEqualSubsetSumSpec
       QueueReconstructionByHeightSpec
       ReshapeTheMatrixSpec
       ReverseStringSpec

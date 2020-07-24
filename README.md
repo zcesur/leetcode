@@ -37,6 +37,7 @@ Leetcode
 | 399 | [Evaluate Division](https://leetcode.com/problems/evaluate-division) | [EvaluateDivision.hs](./src/EvaluateDivision.hs) |
 | 677 | [Map Sum Pairs](https://leetcode.com/problems/map-sum-pairs) | [MapSumPairs.hs](./src/MapSumPairs.hs) |
 | 413 | [Arithmetic Slices](https://leetcode.com/problems/arithmetic-slices) | [ArithmeticSlices.hs](./src/ArithmeticSlices.hs) |
+| 416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum) | [PartitionEqualSubsetSum.hs](./src/PartitionEqualSubsetSum.hs) |
 
 ## Hard
 
