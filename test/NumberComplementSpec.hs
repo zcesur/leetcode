@@ -1,7 +1,7 @@
 module NumberComplementSpec where
 
-import Test.Hspec
-import NumberComplement
+import           Test.Hspec
+import           NumberComplement
 
 spec :: Spec
 spec = do

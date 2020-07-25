@@ -1,7 +1,7 @@
 module KeyboardRowSpec where
 
-import Test.Hspec
-import KeyboardRow
+import           Test.Hspec
+import           KeyboardRow
 
 spec :: Spec
 spec = do

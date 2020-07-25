@@ -1,7 +1,7 @@
 module ReverseStringSpec where
 
-import Test.Hspec
-import ReverseString
+import           Test.Hspec
+import           ReverseString
 
 spec :: Spec
 spec = do

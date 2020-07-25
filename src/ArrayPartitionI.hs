@@ -1,7 +1,10 @@
 module ArrayPartitionI where
 
-import Data.List (transpose, sort, permutations)
-import Util (groupsOf)
+import           Data.List                      ( transpose
+                                                , sort
+                                                , permutations
+                                                )
+import           Util                           ( groupsOf )
 
 -- | Given an array of 2n integers, group these integers into n pairs of
 -- integer, say (a1, b1), (a2, b2), ..., (an, bn) which makes sum of min(ai,
@@ -15,6 +18,6 @@ arrayPairSum xs = sum . head . transpose . (groupsOf 2) . sort $ xs
 -- and 2) how to generate lists of even size using QC.
 arrayPairSumBruteForce :: [Int] -> Int
 arrayPairSumBruteForce = maximum . map findSum . permutations
-  where
-    findSum :: [Int] -> Int
-    findSum = sum . map minimum . groupsOf 2
+ where
+  findSum :: [Int] -> Int
+  findSum = sum . map minimum . groupsOf 2

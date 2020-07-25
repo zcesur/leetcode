@@ -10,12 +10,12 @@ type Moves = [(Direction, Int)]
 -- number of moves in each of the opposite directions.
 judgeCircle :: [Direction] -> Bool
 judgeCircle = cancelsTo0 . foldl increment initial
-  where
-    initial :: Moves
-    initial = map (\x -> (x,0)) [minBound :: Direction ..]
+ where
+  initial :: Moves
+  initial = map (\x -> (x, 0)) [minBound :: Direction ..]
 
 increment :: Moves -> Direction -> Moves
-increment ms d = map (\(x,y) -> if x == d then (x,y+1) else (x,y)) ms
+increment ms d = map (\(x, y) -> if x == d then (x, y + 1) else (x, y)) ms
 
 cancelsTo0 :: Moves -> Bool
 cancelsTo0 ms = lookup R ms == lookup L ms && lookup U ms == lookup D ms

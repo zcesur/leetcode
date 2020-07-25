@@ -1,8 +1,8 @@
 module ParsingABooleanExpressionSpec where
 
-import Test.Hspec
-import ParsingABooleanExpression
-import Data.Either
+import           Test.Hspec
+import           ParsingABooleanExpression
+import           Data.Either
 
 spec :: Spec
 spec = do

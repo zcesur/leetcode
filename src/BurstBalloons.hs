@@ -1,6 +1,6 @@
 module BurstBalloons where
 
-import Data.Array
+import           Data.Array
 
 -- | Find the maximum coins you can collect by bursting the balloons, where
 -- collecting coins works as follows.
@@ -12,15 +12,24 @@ import Data.Array
 -- the burst, the left and right then becomes adjacent.
 maxCoins :: [Int] -> Int
 maxCoins xs = table ! (1, n)
-  where
-    n = length xs
+ where
+  n     = length xs
 
-    xs' = listArray (0, n+1) $ [1] ++ xs ++ [1]
-    table = listArray ((0, 0), (n+1, n+1)) [f i j | i <- [0..n+1]
-                                                  , j <- [0..n+1]]
+  xs'   = listArray (0, n + 1) $ [1] ++ xs ++ [1]
+  table = listArray ((0, 0), (n + 1, n + 1))
+                    [ f i j | i <- [0 .. n + 1], j <- [0 .. n + 1] ]
 
-    f i j | i <= j  = maximum $ map (valueOf (i, j)) [i..j]
-          | i > j   = 0
+  f i j | i <= j = maximum $ map (valueOf (i, j)) [i .. j]
+        | i > j  = 0
 
-    valueOf (i, j) k = xs' ! (i-1) * xs' ! k * xs' ! (j+1) +
-                       table ! (i, k-1) + table ! (k+1, j)
+  valueOf (i, j) k =
+    xs'
+      ! (i - 1)
+      * xs'
+      ! k
+      * xs'
+      ! (j + 1)
+      + table
+      ! (i, k - 1)
+      + table
+      ! (k + 1, j)

@@ -1,8 +1,8 @@
 module FindBottomLeftTreeValueSpec where
 
-import FindBottomLeftTreeValue
-import ADT.Tree
-import Test.Hspec
+import           FindBottomLeftTreeValue
+import           ADT.Tree
+import           Test.Hspec
 
 spec :: Spec
 spec = do

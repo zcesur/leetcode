@@ -1,7 +1,7 @@
 module PartitionEqualSubsetSumSpec where
 
-import PartitionEqualSubsetSum
-import Test.Hspec
+import           PartitionEqualSubsetSum
+import           Test.Hspec
 
 spec :: Spec
 spec = do

@@ -1,7 +1,7 @@
 module ReverseWordsInAStringIIISpec where
 
-import Test.Hspec
-import ReverseWordsInAStringIII
+import           Test.Hspec
+import           ReverseWordsInAStringIII
 
 spec :: Spec
 spec = do

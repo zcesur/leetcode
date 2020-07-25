@@ -1,8 +1,8 @@
 module MaximumBinaryTreeSpec where
 
-import MaximumBinaryTree
-import Test.Hspec
-import ADT.Tree
+import           MaximumBinaryTree
+import           Test.Hspec
+import           ADT.Tree
 
 spec :: Spec
 spec = do
@@ -15,4 +15,4 @@ spec = do
           t0 = Node Nil 0 Nil
           t1 = Node Nil 1 Nil
 
-      maxBinaryTree [3,2,1,6,0,5] `shouldBe` t6
+      maxBinaryTree [3, 2, 1, 6, 0, 5] `shouldBe` t6

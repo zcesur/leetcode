@@ -1,8 +1,8 @@
 module SumOfLeftLeavesSpec where
 
-import ADT.Tree
-import SumOfLeftLeaves
-import Test.Hspec
+import           ADT.Tree
+import           SumOfLeftLeaves
+import           Test.Hspec
 
 spec :: Spec
 spec = do
