@@ -14,5 +14,4 @@ hammingDistance x y = sum $ zipWith diff (rpad maxLen x') (rpad maxLen y')
 -- | Right-pad a list of integers with zeros.
 rpad :: Int -> [Int] -> [Int]
 rpad n xs | n <= length xs = xs
-          | -- ^ For the sake of completeness.
-            otherwise      = take n . (++ repeat 0) $ xs
+          | otherwise      = take n . (++ repeat 0) $ xs
