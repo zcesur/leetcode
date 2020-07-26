@@ -39,7 +39,7 @@ expr :: Parser Expr
 expr = letExpr <|> addExpr <|> multExpr <|> varExpr <|> numExpr <|> parens expr
 
 letExpr :: Parser Expr
-letExpr = keyword "let" *> (Let <$> many1 assignment <*> expr)
+letExpr = keyword "let" *> (Let <$> many1 (try assignment) <*> expr)
 
 addExpr :: Parser Expr
 addExpr = keyword "add" *> (Add <$> expr <*> expr)
@@ -54,7 +54,7 @@ numExpr :: Parser Expr
 numExpr = Num <$> num
 
 assignment :: Parser Assignment
-assignment = try $ (,) <$> identifier <*> expr
+assignment = (,) <$> identifier <*> expr
 
 identifier :: Parser String
 identifier = lexeme $ (:) <$> lower <*> many (lower <|> digit)
@@ -69,7 +69,11 @@ parens :: Parser a -> Parser a
 parens = between (symbol '(') (symbol ')')
 
 num :: Parser Integer
-num = lexeme $ read <$> many1 digit
+num = lexeme $ read <$> (plus <|> minus <|> number)
+ where
+  plus   = char '+' *> number
+  minus  = (:) <$> char '-' <*> number
+  number = many1 digit
 
 symbol :: Char -> Parser Char
 symbol c = lexeme $ char c
