@@ -47,3 +47,4 @@ Leetcode
 | 632 | [Smallest Range](https://leetcode.com/problems/smallest-range) | [SmallestRange.hs](./src/SmallestRange.hs) |
 | 51 | [N-Queens](https://leetcode.com/problems/n-queens) | [NQueens.hs](./src/NQueens.hs) |
 | 1106 | [Parsing A Boolean Expression](https://leetcode.com/problems/parsing-a-boolean-expression) | [ParsingABooleanExpression.hs](./src/ParsingABooleanExpression.hs) |
+| 736 | [Parse Lisp Expression](https://leetcode.com/problems/parse-lisp-expression) | [ParseLispExpression.hs](./src/ParseLispExpression.hs) |
