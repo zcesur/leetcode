@@ -13,6 +13,6 @@ wordFromSameRow :: String -> Bool
 wordFromSameRow []       = True -- vacuously true
 wordFromSameRow (x : xs) = all (`elem` row) xs'
  where
-  row        = head $ filter (x' `elem`) keyboard
-  (x' : xs') = map toLower (x : xs)
-  keyboard   = ["qwertyuiop", "asdfghjkl", "zxcvbnm"]
+  row       = head $ filter (x' `elem`) keyboard
+  (x', xs') = (toLower x, map toLower xs)
+  keyboard  = ["qwertyuiop", "asdfghjkl", "zxcvbnm"]

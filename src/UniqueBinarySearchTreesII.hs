@@ -15,7 +15,7 @@ generateTrees n = generateTreesHelper $ foldl insert Nil [1 .. n]
 -- where for all nodes, either left or right child is an empty tree.
 generateTreesHelper :: Ord a => Tree a -> [Tree a]
 generateTreesHelper Nil            = [Nil]
-generateTreesHelper t@(Node l x r) = case (l, r) of
+generateTreesHelper t@(Node l _ r) = case (l, r) of
   (Nil, Nil) -> [t]
   (Nil, _  ) -> concatMap go $ take (height t + 1) $ iterate rotL t
   (_  , Nil) -> concatMap go $ take (height t + 1) $ iterate rotR t
@@ -24,5 +24,9 @@ generateTreesHelper t@(Node l x r) = case (l, r) of
     -- Generate all structurally unique BST's where the root node of the given
     -- BST stays fixed.
   go :: Ord a => Tree a -> [Tree a]
-  go (Node l x r) =
-    [ Node l' x r' | l' <- generateTreesHelper l, r' <- generateTreesHelper r ]
+  go Nil = []
+  go (Node lt x rt) =
+    [ Node lt' x rt'
+    | lt' <- generateTreesHelper lt
+    , rt' <- generateTreesHelper rt
+    ]

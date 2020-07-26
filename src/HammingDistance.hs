@@ -6,7 +6,7 @@ import           Util                           ( toBinary )
 hammingDistance :: Int -> Int -> Int
 hammingDistance x y = sum $ zipWith diff (rpad maxLen x') (rpad maxLen y')
  where
-  diff x y = abs (x - y)
+  diff a b = abs (a - b)
   x'     = toBinary x
   y'     = toBinary y
   maxLen = max (length x') (length y')

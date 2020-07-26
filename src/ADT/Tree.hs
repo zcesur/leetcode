@@ -54,7 +54,7 @@ levelorder t   = go [t]
   go ts = map val ts ++ go (concatMap children ts)
 
 printT :: Show a => Tree a -> IO ()
-printT (Node l x r) = go "" (Node l x r)
+printT = go ""
  where
   go _       Nil          = return ()
   go padding (Node l x r) = do

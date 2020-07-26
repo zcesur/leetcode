@@ -4,6 +4,5 @@ import           ADT.Tree
 
 maxBinaryTree :: [Int] -> Tree Int
 maxBinaryTree [] = Nil
-maxBinaryTree xs =
-  let (ls, max : rs) = span (/= maximum xs) xs
-  in  Node (maxBinaryTree ls) max (maxBinaryTree rs)
+maxBinaryTree xs = Node (maxBinaryTree ls) (head rs) (maxBinaryTree (tail rs))
+  where (ls, rs) = span (/= maximum xs) xs

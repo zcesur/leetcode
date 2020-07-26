@@ -2,9 +2,7 @@
 
 module FindAllDuplicatesInAnArray where
 
-import           Control.Monad                  ( foldM
-                                                , liftM
-                                                )
+import           Control.Monad                  ( foldM )
 import           Control.Monad.ST
 import           Data.Array.ST
 
@@ -15,15 +13,15 @@ import           Data.Array.ST
 -- 
 -- Could you do it without extra space and in O(n) runtime?
 findDuplicates :: [Int] -> [Int]
-findDuplicates xs = runST $ findDuplicates' xs
+findDuplicates xs = runST (findDuplicates' xs)
  where
   findDuplicates' :: forall s . [Int] -> ST s [Int]
-  findDuplicates' xs = do
-    arr <- newListArray (1, length xs) xs :: ST s (STArray s Int Int)
+  findDuplicates' ys = do
+    arr <- newListArray (1, length ys) ys :: ST s (STArray s Int Int)
 
     let go :: [Int] -> Int -> ST s [Int]
         go acc i = do
-          x <- liftM abs $ readArray arr i
+          x <- abs <$> readArray arr i
           y <- readArray arr x
           if y < 0
             then return (x : acc)
@@ -31,4 +29,4 @@ findDuplicates xs = runST $ findDuplicates' xs
               writeArray arr x (-y)
               return acc
 
-    foldM go [] [1 .. length xs]
+    foldM go [] [1 .. length ys]

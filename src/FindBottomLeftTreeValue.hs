@@ -6,5 +6,5 @@ import           ADT.Tree
 findBottomLeftValue :: Tree a -> a
 findBottomLeftValue t = go [t]
  where
-  go tss@(t : ts) | null $ concatMap children tss = val t
-                  | otherwise                     = go $ concatMap children tss
+  go ts | null $ concatMap children ts = val (head ts)
+        | otherwise                    = go $ concatMap children ts

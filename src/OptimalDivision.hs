@@ -23,37 +23,39 @@ optimalDivision xs = showTable ! (1, n)
   xs'       = Array.listArray (1, n) xs
 
   showTable = Array.listArray bounds [ show' Max i j | (i, j) <- range bounds ]
-  show' m i j | i == j     = show $ floor $ xs' ! i
+  show' m i j | i == j     = show $ fl $ xs' ! i
               | k + 1 == j = expr1 ++ "/" ++ expr2
               | i == k     = expr1 ++ "/(" ++ expr2 ++ ")"
               | otherwise  = "(" ++ expr1 ++ ")/(" ++ expr2 ++ ")"
    where
     expr1 = show' m i k
     expr2 = show' (other m) (k + 1) j
-    k     = snd $ (table m) ! (i, j)
+    k     = snd $ table m ! (i, j)
+    fl    = floor :: Float -> Int
 
   maxTable = Array.listArray bounds [ fmax i j | (i, j) <- range bounds ]
   minTable = Array.listArray bounds [ fmin i j | (i, j) <- range bounds ]
   table Max = maxTable
   table Min = minTable
 
-  fmax i j
-    | i == j
-    = (xs' ! i, i)
-    | i < j
-    = maximum
-      $ [ (fst (maxTable ! (i, k)) / fst (minTable ! (k + 1, j)), k)
-        | k <- [i .. j - 1]
-        ]
-  fmin i j
-    | i == j
-    = (xs' ! i, i)
-    | i < j
-    = minimum
-      $ [ (fst (minTable ! (i, k)) / fst (maxTable ! (k + 1, j)), k)
-        | k <- [i .. j - 1]
-        ]
+  fmax i j = case compare i j of
+    LT ->
+      maximum
+        $ [ (fst (maxTable ! (i, k)) / fst (minTable ! (k + 1, j)), k)
+          | k <- [i .. j - 1]
+          ]
+    _ -> (xs' ! i, i)
+
+  fmin i j = case compare i j of
+    LT ->
+      minimum
+        $ [ (fst (minTable ! (i, k)) / fst (maxTable ! (k + 1, j)), k)
+          | k <- [i .. j - 1]
+          ]
+    _ -> (xs' ! i, i)
 
 data Table = Min | Max
+
+other :: Table -> Table
 other Min = Max
 other Max = Min

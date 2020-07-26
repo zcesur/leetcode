@@ -19,8 +19,9 @@ maxCoins xs = table ! (1, n)
   table = listArray ((0, 0), (n + 1, n + 1))
                     [ f i j | i <- [0 .. n + 1], j <- [0 .. n + 1] ]
 
-  f i j | i <= j = maximum $ map (valueOf (i, j)) [i .. j]
-        | i > j  = 0
+  f i j = case compare i j of
+    GT -> 0
+    _  -> maximum $ map (valueOf (i, j)) [i .. j]
 
   valueOf (i, j) k =
     xs'

@@ -1,7 +1,7 @@
 module SmallestRange where
 
 import qualified Data.Map.Lazy                 as Map
-import           Data.Map.Lazy                  ( Map(..) )
+import           Data.Map.Lazy                  ( Map )
 
 import           Control.Monad.State
 
@@ -18,14 +18,12 @@ smallestRange xs = evalState (go (0, maxBound :: Int)) xs'
   go :: (Int, Int) -> State (Map [Int] Char) (Int, Int)
   go range = do
     (mins, _) <- popMin
-
-    if null mins
-      then return range
-      else do
-        let (min : rest) = mins
-        maxS <- peekMax
-        push (rest, ' ')
-        go $ chooseRange range (min, head (fst maxS))
+    case mins of
+      []       -> return range
+      (m : ms) -> do
+        (maxs, _) <- peekMax
+        push (ms, ' ')
+        go $ chooseRange range (m, head maxs)
 
 popMin :: State (Map k a) (k, a)
 popMin = state Map.deleteFindMin

@@ -10,4 +10,6 @@ countBits n = elems bits
  where
   bits = listArray (0, n) (0 : map f [1 .. n])
   f i = 1 + bits ! (i - largestPowOf2LT i)
-  largestPowOf2LT = (2 ^) . floor . logBase 2 . fromIntegral
+  largestPowOf2LT = pow 2 . fl . logBase 2 . fromIntegral
+  pow             = (^) :: Int -> Int -> Int
+  fl              = floor :: Float -> Int

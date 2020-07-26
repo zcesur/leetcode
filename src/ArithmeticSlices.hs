@@ -4,6 +4,7 @@ import qualified Data.Array                    as A
 import           Data.Array                     ( (!) )
 import           Data.Maybe                     ( isJust )
 
+numberOfArithmeticSlices :: (Num a, Eq a) => [a] -> Int
 numberOfArithmeticSlices xs = counts ! (1, n)
  where
   n      = length xs
